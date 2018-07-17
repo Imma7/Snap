@@ -10,3 +10,5 @@ class Image(models.Model):
 
 
 
+class Category(models.Model):
+    category_name = models.CharField(max_length = 50)
