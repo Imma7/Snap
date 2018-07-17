@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'snapped.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'snapped',
+        'NAME': 'snap',
         'USER': 'imma',
         'PASSWORD': '7007',
     }
