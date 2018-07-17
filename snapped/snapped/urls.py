@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'snap/', include('snap.urls')),
+    url(r'^snap/', include('snap.urls'))
 ]
