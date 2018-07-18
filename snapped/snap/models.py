@@ -8,10 +8,18 @@ class Image(models.Model):
     img_description = models.TextField(max_length=50, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     location = models.ForeignKey('Location')
-    category = models.ManyToManyField('Category')
+    category = models.ForeignKey('Category')
 
-    
-    
+    @classmethod
+    def display_image(cls):
+        today = dt.date.today()
+        
+    @classmethod
+    def get_all(cls):
+       images = cls.objects.order_by('-pub_date')
+       return images
+        
+
     def __str__(self):
         return self.img_name
 
