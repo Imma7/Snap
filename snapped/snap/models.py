@@ -43,7 +43,7 @@ class Image(models.Model):
         
     @classmethod
     def filter_category(cls, category):
-        images = cls.objects.filter(category__category_name__istartswith=location)
+        images = cls.objects.filter(category__category_name__istartswith=category)
         return images
 
     def __str__(self):
