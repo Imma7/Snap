@@ -41,6 +41,10 @@ class Image(models.Model):
         images = cls.objects.filter(location__location_name__istartswith=location)
         return images
         
+    @classmethod
+    def filter_category(cls, category):
+        images = cls.objects.filter(category__category_name__istartswith=location)
+        return images
 
     def __str__(self):
         return self.img_name
