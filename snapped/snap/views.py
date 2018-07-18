@@ -10,6 +10,13 @@ def index(request):
 
     return render(request, 'index.html', {"image":image})
 
+def get_location(request, location):
+    image = Image.filter_location(location)
+    return render(request, 'location.html', locals())
+
+    
+    
+
 def convert_dates(dates):
     # Function that gets the weekday number for the date.
     day_number = dt.date.weekday(dates)
