@@ -10,6 +10,8 @@ class Image(models.Model):
     location = models.ForeignKey('Location')
     category = models.ManyToManyField('Category')
 
+    
+    
     def __str__(self):
         return self.img_name
 
