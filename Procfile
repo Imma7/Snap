@@ -1,1 +1,1 @@
-web: gunicorn snap.wsgi
+web: gunicorn snapped.wsgi
