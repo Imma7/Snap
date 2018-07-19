@@ -18,7 +18,7 @@ def get_category(request, category):
     image = Image.filter_category(category)
     return render(request, 'category.html', locals())
     
-    
+
 
 def convert_dates(dates):
     # Function that gets the weekday number for the date.
