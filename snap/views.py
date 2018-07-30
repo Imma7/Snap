@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import datetime as dt
 from .models import Image
+import pyperclip
 
 # Create your views here.
 def index(request):

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load bootstrap3 %}
 
+
+
 {% block content %}
 
 <div class="container">
@@ -40,6 +42,8 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-clipboard-text="http://127.0.0.1:8000{{image_item.Image_url.url}}" >Copy Link</button>
+
+              <span class="btn-clipboard" title="Copy this code"><span class="clipboard-success" style="display: none;">Copied!</span><span class="clipboard-success" style="display: none;">Copied!</span><i class="icon icon-clipboard"></i></span>
 
               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
               
