@@ -27,6 +27,17 @@ class Image(models.Model):
     location = models.ForeignKey('Location')
     category = models.ForeignKey('Category')
 
+    def save_image(self):
+        self.save()
+    
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def get_image_by_id(cls, id):
+        specific_image = cls.objects.get(id = id)
+        return specific_image
+
     @classmethod
     def display_image(cls):
         today = dt.date.today()
