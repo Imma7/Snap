@@ -2,6 +2,7 @@
 {% load bootstrap3 %}
 
 {% block content %}
+{{block.super}}
 
 <div class="container">
         
@@ -10,12 +11,9 @@
         <!--Display news Images  -->
         <div class="col-md-4">
           <br>
-          <img src="{{ image_item.image.url }}" alt="Image" width="100%">
+          <img src="{{ image_item.image.url }}" alt="Image" width="100%" data-toggle="modal" data-target="#{{image_item.id}}">
           <hr>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" style="text-align:center;" data-toggle="modal" data-target="#{{image_item.id}}">
-          Image details
-          </button>
+          
             
       
       <!-- Modal -->
