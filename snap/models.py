@@ -6,12 +6,14 @@ import datetime as dt
 
 class Category(models.Model):
     category_name = models.CharField(max_length = 50)
+    # image = models.ForeignKey(Image)
 
     def __str__(self):
         return self.category_name
 
 class Location(models.Model):
     location_name = models.CharField(max_length = 50)
+    # image = models.ForeignKey(Image)
 
     def __str__(self):
         return self.location_name
@@ -24,9 +26,12 @@ class Image(models.Model):
     img_name = models.CharField(max_length = 30)
     img_description = models.TextField(max_length=50, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
-    location = models.ForeignKey('Location')
-    category = models.ForeignKey('Category')
+    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
 
+    def __str__(self):
+        return self.img_name
+        
     def save_image(self):
         self.save()
     
@@ -62,5 +67,4 @@ class Image(models.Model):
         images = cls.objects.filter(img_name__icontains=search_term)
         return images
 
-    def __str__(self):
-        return self.img_name
+    
