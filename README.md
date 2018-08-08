@@ -29,7 +29,7 @@ A user can search based on categories and locations listed.
 
 ## Development and Setup.
 
-### prerequisites
+### Prerequisites
 + First clone the project to your camputer. ```git clone https://github.com/Imma7/Snap.git```
 + Ensure python3 is installed.
 + Install virtual environment by running ```pip3 install virtualenv```
@@ -37,6 +37,9 @@ A user can search based on categories and locations listed.
 + Then create a superuser by running ```python manage.py createsuperuser``` so that as an admin yul be able to manage ```CRUD``` operations to the application.
 + Then start the server by running ```python3 manage.py runserver```.
 + Copy the link and paste in any browser ```http://localhost:8000```
+
+## Running Tests
+```python3.6 manage.py test <name-of-app>```
 
 ## Technology and Tools Used
 
